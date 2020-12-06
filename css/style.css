@@ -72,41 +72,79 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+footer .footer-info .contact ul, main .team ul.designers li.designer .desc ul.social {
+  display: flex;
+  justify-content: center;
+}
+footer .footer-info .contact ul li, main .team ul.designers li.designer .desc ul.social li {
+  width: 50px;
+  height: 50px;
+  background-color: #222222;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 5px;
+}
+footer .footer-info .contact ul i, main .team ul.designers li.designer .desc ul.social i {
+  color: #fff;
+  line-height: 50px;
+}
+
 body {
   background: #191919;
   color: #b3b3b3;
   font-size: 16px;
   font-family: "Libre Franklin", sans-serif;
+  line-height: 1.5em;
 }
 body h1 {
-  font-size: 50px;
-  color: #fff;
   font-weight: 600;
+  line-height: 1em;
 }
 body h2 {
-  font-size: 40px;
-  margin-bottom: 50px;
   font-weight: 600;
+  line-height: 1em;
+}
+body h3 {
+  font-weight: 600;
+  line-height: 1em;
+}
+body h4 {
+  font-weight: 600;
+  line-height: 1em;
+}
+body h5 {
+  font-weight: 600;
+  line-height: 1em;
+}
+body h6 {
+  font-weight: 600;
+  line-height: 1em;
+}
+body h1 {
+  font-size: 60px;
+  color: #fff;
+}
+body h2 {
+  font-size: 45px;
+  margin-bottom: 50px;
   color: #fff;
 }
 body h3 {
   font-size: 30px;
   color: #fff;
-  font-weight: 600;
 }
 body h4 {
   text-transform: uppercase;
   color: #E32879;
   margin-bottom: 30px;
   padding-top: 20px;
-  font-weight: 600;
 }
 body button {
   padding: 12px 30px;
   background-color: #E32879;
   color: #fff;
   margin-top: 60px;
-  color: #fff;
+  font-weight: 600;
 }
 
 .container {
@@ -127,13 +165,18 @@ body button {
 .header .header-top ul li {
   font-weight: 600;
   padding-left: 2em;
+  color: #fff;
+  cursor: pointer;
 }
-.header .header-top ul li:first-child {
+.header .header-top ul li:hover, .header .header-top ul li:first-child {
   color: #E32879;
 }
 .header .header-poster {
   height: 800px;
   background-image: url(../src/img/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
 }
 .header .header-poster h4 {
   padding-top: 250px;
@@ -143,7 +186,9 @@ body button {
   font-size: 60px;
 }
 .header .header-poster p {
-  margin-top: 60px;
+  margin-top: 30px;
+  color: #fff;
+  width: 40%;
 }
 .header .header-poster button {
   margin-top: 60px;
@@ -159,11 +204,14 @@ main .story .two-col {
   display: flex;
 }
 main .story .two-col .story-info {
-  margin: 30px;
+  margin: 10px 0 0 50px;
   text-align: left;
 }
+main .story .two-col .story-info h2 {
+  margin: 0;
+}
 main .story .two-col .story-info p {
-  margin-top: 60px;
+  margin-top: 20px;
 }
 main .service ul.services {
   display: grid;
@@ -191,13 +239,26 @@ main .service ul.services li::before {
   height: 50px;
   margin: 0 auto;
   padding: 20px;
-  background-image: url(../../src/img/services/service-1.png);
 }
 main .service ul.services li:hover {
-  border-bottom: solid 5px #E32879;
+  border-bottom: solid 3px #E32879;
+}
+main .service ul.services li:nth-child(1)::before {
+  background-image: url(../../src/img/services/service-1.png);
+  background-repeat: no-repeat;
+}
+main .service ul.services li:nth-child(2)::before {
+  background-image: url(../../src/img/services/service-2.png);
+  background-repeat: no-repeat;
+}
+main .service ul.services li:nth-child(3)::before {
+  background-image: url(../../src/img/services/service-3.png);
+  background-repeat: no-repeat;
 }
 main .portfolio {
   position: relative;
+  padding-top: 100px;
+  margin-bottom: 150px;
 }
 main .portfolio .back-portfolio {
   position: absolute;
@@ -207,33 +268,73 @@ main .portfolio .back-portfolio {
   width: 100%;
   background-color: #222222;
 }
-main .portfolio h4 .picture-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+main .portfolio h2 {
+  margin-bottom: 100px;
 }
-main .portfolio h4 .picture-grid img:first-child {
+main .portfolio .picture-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  overflow: hidden;
+}
+main .portfolio .picture-grid li:first-child {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
 }
-main .portfolio h4 .picture-grid img:nth-child(2) {
+main .portfolio .picture-grid li:nth-child(2) {
   grid-column-start: 3;
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 2;
 }
-main .portfolio h4 .picture-grid img:nth-child(3) {
+main .portfolio .picture-grid li:nth-child(3) {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
 }
-main .portfolio h4 .picture-grid img:nth-child(4) {
+main .portfolio .picture-grid li:nth-child(4) {
   grid-column-start: 4;
   grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 3;
+}
+main .portfolio .picture-grid li {
+  position: relative;
+}
+main .portfolio .picture-grid li .hover-icon {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+main .portfolio .picture-grid li .hover-icon a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #E32879;
+  color: #fff;
+  z-index: 10;
+  font-size: 30px;
+  line-height: 60px;
+  transition: all 0.5s ease-in-out;
+  margin: 0 5px;
+}
+main .portfolio .picture-grid li .hover-icon a:first-child {
+  transform: translateX(-50px);
+  opacity: 0;
+}
+main .portfolio .picture-grid li .hover-icon a:last-child {
+  transform: translateX(50px);
+  opacity: 0;
+}
+main .portfolio .picture-grid li:hover a:first-child, main .portfolio .picture-grid li:hover a:last-child {
+  transform: translateX(0);
+  opacity: 1;
 }
 main .experience {
   text-align: left;
@@ -247,7 +348,6 @@ main .experience .experience-header .blok-name {
 main .experience .experience-header .blok-name h2 {
   width: 70%;
   margin-bottom: 0;
-  font-size: 50px;
 }
 main .experience .experience-header .blok-name button {
   margin-top: 50px;
@@ -260,42 +360,85 @@ main .experience .experience-header .statistics .statistic {
   margin-bottom: 50px;
 }
 main .experience .experience-header .statistics .statistic .number {
-  font-size: 60px;
+  font-size: 55px;
   font-weight: 600;
   color: #E32879;
   margin-right: 50px;
 }
 main .experience .experience-header .statistics .statistic .number-desc h3 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
-main .experience ul.replics {
+main .experience .replics {
+  overflow: hidden;
+  text-align: center;
+}
+main .experience .replics input[type=radio] + label {
+  display: inline-block;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+main .experience .replics input[type=radio] {
+  visibility: hidden;
+}
+main .experience .replics input[type=radio]:checked + label:after {
+  background-color: #E32879;
+  width: 40px;
+}
+main .experience .replics input[type=radio] + label:after {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #b3b3b3;
+  background-size: 100%;
+  transition: all 0.3s ease-in;
+}
+main .experience .replics #right-nav:checked ~ #slider-replics {
+  transform: translateX(0);
+}
+main .experience .replics #left-nav:checked ~ #slider-replics {
+  transform: translateX(-50%);
+}
+main .experience .replics #left-nav + label {
+  margin-bottom: 20px;
+}
+main .experience .replics ul {
+  transition: all 1s ease-in-out;
   display: flex;
+  width: 200%;
+  text-align: left;
 }
-main .experience ul.replics li {
+main .experience .replics ul li {
   display: flex;
   background-color: #222222;
   padding: 30px;
+  width: 24%;
+  margin-right: 1%;
 }
-main .experience ul.replics li:first-child {
-  margin-right: 20px;
-}
-main .experience ul.replics li img {
+main .experience .replics ul li img {
   border-radius: 50%;
   margin-right: 30px;
   align-self: center;
 }
-main .experience ul.replics li .replic {
+main .experience .replics ul li .replic {
   margin-top: 30px;
 }
-main .experience ul.replics li .replic h4 {
+main .experience .replics ul li .replic h4 {
   margin-bottom: 10px;
 }
-main .experience ul.replics li .replic p {
+main .experience .replics ul li .replic p {
   margin: 0 0 30px 0;
 }
 main .trends {
   background-image: url(../../src/img/ctc-bg.jpg);
   padding: 60px 0;
+}
+main .trends p {
+  color: #fff;
+  padding: 0 10%;
 }
 main .trends button {
   color: #E32879;
@@ -319,10 +462,10 @@ main .team ul.designers li.designer .desc {
   transform: scale(0);
   opacity: 0;
   transition: all 0.5s ease-in;
-  padding: 20px;
+  padding: 50px 10px 0 10px;
 }
-main .team ul.designers li.designer .desc ul i {
-  color: #fff;
+main .team ul.designers li.designer .desc h3 {
+  margin-top: 30px;
 }
 main .team ul.designers li.designer:hover .desc {
   display: block;
@@ -343,7 +486,7 @@ main .blog ul li {
   background-color: #191919;
 }
 main .blog ul li:first-child {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 main .blog ul li .blog-item {
   padding: 30px;
@@ -364,6 +507,7 @@ main .blog ul li .blog-item .author-blog {
   display: flex;
 }
 main .blog ul li .blog-item .author-blog img {
+  flex-shrink: 0;
   border-radius: 50%;
   margin-right: 20px;
 }
@@ -389,38 +533,39 @@ footer .footer-info h4 {
   margin: 0;
   text-transform: none;
   color: #fff;
+  font-size: 20px;
 }
 footer .footer-info ul, footer .footer-info p {
-  margin-top: 30px;
+  margin-top: 25px;
 }
 footer .footer-info .contact {
-  width: 200px;
+  width: 250px;
 }
 footer .footer-info .newsletter {
   width: 30%;
 }
 footer .footer-info .newsletter form {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 footer .footer-info .newsletter form input {
   padding: 13px 0 13px 30px;
   width: 100%;
-  background-color: #222222;
+  background-color: #191919;
   border: 1px solid #b3b3b3;
+  color: #fff;
 }
 footer .footer-info .newsletter form button {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 footer .footer-info .instagram ul {
-  width: 0px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 5px;
 }
 footer .footer-info .instagram ul li {
-  width: 50px;
+  width: 80px;
 }
 footer .footer-info .instagram ul li img {
   width: 100%;
