@@ -244,15 +244,15 @@ main .service ul.services li:hover {
   border-bottom: solid 3px #E32879;
 }
 main .service ul.services li:nth-child(1)::before {
-  background-image: url(../../src/img/services/service-1.png);
+  background-image: url(../src/img/services/service-1.png);
   background-repeat: no-repeat;
 }
 main .service ul.services li:nth-child(2)::before {
-  background-image: url(../../src/img/services/service-2.png);
+  background-image: url(../src/img/services/service-2.png);
   background-repeat: no-repeat;
 }
 main .service ul.services li:nth-child(3)::before {
-  background-image: url(../../src/img/services/service-3.png);
+  background-image: url(../src/img/services/service-3.png);
   background-repeat: no-repeat;
 }
 main .portfolio {
@@ -433,7 +433,7 @@ main .experience .replics ul li .replic p {
   margin: 0 0 30px 0;
 }
 main .trends {
-  background-image: url(../../src/img/ctc-bg.jpg);
+  background-image: url(../src/img/ctc-bg.jpg);
   padding: 60px 0;
 }
 main .trends p {

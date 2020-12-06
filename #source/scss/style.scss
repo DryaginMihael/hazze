@@ -183,7 +183,7 @@ main{
             }
             @for $i from 1 through 3 {
                 li:nth-child(#{$i})::before{
-                    background-image: url(../../src/img/services/service-#{$i}.png);
+                    background-image: url(../src/img/services/service-#{$i}.png);
                     background-repeat: no-repeat;
                 }
             }
@@ -386,7 +386,7 @@ main{
         }   
     }
     .trends{
-        background-image: url(../../src/img/ctc-bg.jpg);
+        background-image: url(../src/img/ctc-bg.jpg);
         padding: 60px 0;
         
         p{
