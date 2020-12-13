@@ -77,6 +77,7 @@ footer .footer-info .contact ul, main .team ul.designers li.designer .desc ul.so
   justify-content: center;
 }
 footer .footer-info .contact ul li, main .team ul.designers li.designer .desc ul.social li {
+  flex-shrink: 0;
   width: 50px;
   height: 50px;
   background-color: #222222;
@@ -139,6 +140,9 @@ body h4 {
   margin-bottom: 30px;
   padding-top: 20px;
 }
+body a:hover, body a:active, body a {
+  color: #fff;
+}
 body button {
   padding: 12px 30px;
   background-color: #E32879;
@@ -169,8 +173,24 @@ body button {
   color: #fff;
   cursor: pointer;
 }
-.header .header-top ul li:hover, .header .header-top ul li:first-child {
+.header .header-top ul li:hover a {
   color: #E32879;
+}
+.header .header-top ul li:first-child a {
+  color: #E32879;
+}
+@media screen and (max-width: 767px) {
+  .header .header-top {
+    display: block;
+  }
+  .header .header-top .logo {
+    padding: 10px 0;
+    text-align: center;
+  }
+  .header .header-top ul li {
+    padding: 0;
+    flex-grow: 1;
+  }
 }
 .header .header-poster {
   height: 800px;
@@ -534,7 +554,7 @@ main .experience .replics #nav4 + label {
     transform: translateX(-25%);
   }
   main .experience .replics #nav3:checked ~ #slider-replics {
-    transform: translateX(-55%);
+    transform: translateX(-50%);
   }
   main .experience .replics #nav4:checked ~ #slider-replics {
     transform: translateX(-75%);
@@ -633,7 +653,7 @@ main .blog ul li .blog-item .author-blog {
 }
 main .blog ul li .blog-item .author-blog img {
   flex-shrink: 0;
-  border-radius: 50%;
+  border-radius: 10px;
   margin-right: 20px;
 }
 main .blog ul li .blog-item .author-blog .author-info .author-name {
@@ -661,6 +681,24 @@ main .blog ul li .blog-item .author-blog .author-info .author-prof {
 @media screen and (max-width: 991px) {
   main .blog ul {
     width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  main .blog ul {
+    width: 70%;
+  }
+  main .blog ul li {
+    margin: 0 auto;
+    margin-top: 50px;
+    display: block;
+  }
+  main .blog ul li > img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .blog ul {
+    width: 90%;
   }
 }
 
@@ -725,6 +763,15 @@ footer .footer-info .instagram ul li img {
   footer .footer-info > div {
     width: 80% !important;
     margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 550px) {
+  footer .footer-info {
+    grid-template-columns: 1fr;
+  }
+  footer .footer-info > div {
+    text-align: center;
+    margin: 10px auto;
   }
 }
 footer .copyright {
