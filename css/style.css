@@ -298,7 +298,7 @@ main .service ul.services li:nth-child(3)::before {
     margin: 0 auto;
   }
   main .service ul.services li {
-    height: 250px;
+    height: auto;
   }
   main .service ul.services li:nth-child(1) {
     grid-row-start: 1;
@@ -371,6 +371,7 @@ main .portfolio .picture-grid li .hover-icon {
   left: 0;
   bottom: 0;
   right: 0;
+  transform: translateY(-30%);
 }
 main .portfolio .picture-grid li .hover-icon a {
   display: inline-block;
@@ -566,6 +567,12 @@ main .experience .replics #nav4 + label {
     width: 25%;
   }
 }
+@media screen and (max-width: 500px) {
+  main .experience .replics ul li {
+    display: block;
+    text-align: center;
+  }
+}
 main .trends {
   background-image: url(../src/img/ctc-bg.jpg);
   background-size: cover;
@@ -615,6 +622,17 @@ main .team ul.designers li.designer:hover .desc {
     margin: 0 auto;
     margin-bottom: 50px;
     width: 370px;
+  }
+}
+@media screen and (max-width: 420px) {
+  main .team ul.designers li.designer {
+    width: 100%;
+  }
+  main .team ul.designers li.designer img {
+    width: 100%;
+  }
+  main .team ul.designers li.designer .desc {
+    visibility: hidden;
   }
 }
 main .blog {

@@ -235,7 +235,7 @@ main{
                 width: 80%;
                 margin: 0 auto;
                 li{
-                   height: 250px;
+                   height: auto;
                 }
                 @for $i from 1 through 3 {
                     li:nth-child(#{$i}){
@@ -303,6 +303,7 @@ main{
                     margin: auto;
                     position: absolute;
                     top: 50%; left: 0; bottom: 0; right: 0;
+                    transform: translateY(-30%);
                     a{
                         display: inline-block;
                         width: 60px;
@@ -526,6 +527,16 @@ main{
                 }   
             }
         }
+        @media screen and (max-width: 500px){
+            .replics {
+                ul{
+                    li{
+                        display: block;
+                        text-align: center;
+                    }
+                }
+            }
+        }
     }
     .trends{
         background-image: url(../src/img/ctc-bg.jpg);
@@ -582,6 +593,17 @@ main{
                     margin-bottom: 50px;
                     width: 370px;
                     
+                }
+            }
+            @media screen and (max-width: 420px){
+                li.designer{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                    .desc{
+                        visibility: hidden;
+                    }
                 }
             }
         }
